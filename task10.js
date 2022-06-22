@@ -20,7 +20,16 @@ Promise.race([first, second, third])
 .then(data => {
     console.log(data)
 });
- 
+
+// Добавлена функция async/await 
+
+async function getAsyncFunction() {
+    let promise_array = [first, second, third];
+    let result = await promise_array;
+    Promise.race(promise_array).then((result) => console.log(result));
+}
+  
+getAsyncFunction();
 
 /*2. Сделайте функцию getNum, которая возвращает промис, который с задержкой в 3 секунды выведет случайное число от 1 до 5.
 Создайте async функцию, которая с помощью await будетдожидаться результата getNum, затем возводить его в квадрат и выводить на экран.*/
