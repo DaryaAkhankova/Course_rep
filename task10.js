@@ -24,9 +24,9 @@ Promise.race([first, second, third])
 // Добавлена функция async/await 
 
 async function getAsyncFunction() {
-    let promise_array = [first, second, third];
-    let result = await promise_array;
-    Promise.race(promise_array).then((result) => console.log(result));
+    let promiseArray = [first, second, third];
+    let result = await promiseArray;
+    Promise.race(promiseArray).then((result) => console.log(result));
 }
   
 getAsyncFunction();
